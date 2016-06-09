@@ -1,0 +1,24 @@
+
+<h1>New Music</h1>
+
+
+<form ng-submit="createMusic()">
+  <div class="form-group">
+    <label for="description">Title</label>
+    <textarea class="form-control" id="description" ng-model="music.title"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="description">Artist</label>
+    <textarea class="form-control" id="description" ng-model="music.artist"></textarea>
+  </div>
+   <div class="form-group">
+    <label for="description">Album</label>
+    <textarea class="form-control" id="description" ng-model="music.album"></textarea>
+  </div>
+   <div class="form-group">
+    <label for="description">Url</label>
+    <textarea class="form-control" id="description" ng-model="music.url"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

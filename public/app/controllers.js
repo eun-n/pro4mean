@@ -1,43 +1,39 @@
-angular.module('BreedCtrls', ['BreedServices'])
-.controller('HomeCtrl', ['$scope', 'Breed', function($scope, Breed) {
-  $scope.breeds = [];
+angular.module('MusicCtrls', ['MusicServices'])
+.controller('HomeCtrl', ['$scope', 'Music', function($scope, Music) {
 
-  Breed.query(function success(data) {
-    $scope.breeds = data;
+  Music.query(function success(data) {
+    $scope.musics = data;
   }, function error(data) {
     console.log(data);
   });
 
-  $scope.deleteBreed = function(id, breedIdx) {
-    Breed.delete({id: id}, function success(data) {
-      $scope.breed.splice(breedIdx, 1);
+  $scope.deleteMusic = function(id, musicIdx) {
+    Music.delete({id: id}, function success(data) {
+      $scope.music.splice(musicIdx, 1);
     }, function error(data) {
       console.log(data);
     });
   }
 }])
-.controller('ShowCtrl', ['$scope', '$stateParams', 'Breed', function($scope, $stateParams, Breed) {
-  $scope.breed = {};
+.controller('ShowCtrl', ['$scope', '$stateParams', 'Music', function($scope, $stateParams, Music) {
+  $scope.music = {};
 
-  Breed.get({id: $stateParams.id}, function success(data) {
-    $scope.breed = data;
+  Music.get({id: $stateParams.id}, function success(data) {
+    $scope.music = data;
   }, function error(data) {
     console.log(data);
   });
 }])
-.controller('NewCtrl', ['$scope', '$location', 'Breed', function($scope, $location, Breed) {
-  $scope.breed = {
-    name: '',
-    size: '',
-    lifespan: '', 
-    training: '', 
-    shedding: '',
-    energylevel: '', 
-    image: ''
+.controller('NewCtrl', ['$scope', '$location', 'Music', function($scope, $location, Music) {
+  $scope.music = {
+    title: '',
+    artist: '',
+    album: '', 
+    url: ''
   };
 
-  $scope.createBreed = function() {
-    Breed.save($scope.breed, function success(data) {
+  $scope.createMusic = function() {
+    Music.save($scope.music, function success(data) {
       $location.path('/');
     }, function error(data) {
       console.log(data);
@@ -87,3 +83,5 @@ angular.module('BreedCtrls', ['BreedServices'])
 .controller('AlertCtrl', ['$scope', 'Alerts', function($scope, Alerts) {
   $scope.Alerts = Alerts;
 }]);
+
+

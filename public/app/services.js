@@ -1,6 +1,6 @@
-angular.module('BreedServices', ['ngResource'])
-.factory('Breed', ['$resource', function($resource) {
-  return $resource('/api/breed/:id');
+angular.module('MusicServices', ['ngResource'])
+.factory('Music', ['$resource', function($resource) {
+  return $resource('/api/music/:id');
 }])
 
 .factory('Auth', ['$window', function($window) {

@@ -1,4 +1,4 @@
-var app = angular.module('BreedApp', ['ui.router', 'BreedCtrls']);
+var app = angular.module('MusicApp', ['ui.router', 'MusicCtrls']);
 
 app.config([
   '$stateProvider',
@@ -11,17 +11,17 @@ app.config([
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: 'app/views/breeds.html',
+    templateUrl: 'app/views/musics.html',
     controller: 'HomeCtrl'
   })
-  .state('newBreeds', {
-    url: '/breeds/new',
-    templateUrl: 'app/views/newBreeds.html',
+  .state('newMusics', {
+    url: '/musics/new',
+    templateUrl: 'app/views/newMusics.html',
     controller: 'NewCtrl'
   })
-  .state('breedShow', {
-    url: '/breeds/:id',
-    templateUrl: 'app/views/showBreed.html',
+  .state('musicShow', {
+    url: '/musics/:id',
+    templateUrl: 'app/views/showMusic.html',
     controller: 'ShowCtrl'
   })
   .state('signup', {
@@ -41,6 +41,12 @@ app.config([
 
   $locationProvider.html5Mode(true);
 }])
+
+.config(function($sceProvider) {
+  // Completely disable SCE.  For demonstration purposes only!
+  // Do not use in new projects.
+  $sceProvider.enabled(false);
+})
 
 .config(['$httpProvider', function($httpProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
