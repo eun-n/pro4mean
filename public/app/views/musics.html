@@ -8,7 +8,8 @@
 		<div class="row">
 			<iframe class="col-md-6" width="640" height="360" frameBorder="0" src="{{music.url}}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			  
-			  <a id="oinfo" class="col-md-5 col-md-offset-1" ng-href="/musics/{{music._id}}"><h1>{{music.title}}</h1>
+			  <a id="oinfo" class="col-md-5 col-md-offset-1" ng-href="/musics/{{music._id}}">
+			  <h1>#{{$index + 1}}. {{music.title}}</h1>
 			  <h2>{{music.artist}} | {{music.album}}</h2></a>
 			  </div>
 			  <a ng-click="deleteMusic(music._id, $index)" class="btn glyphicon glyphicon-remove pull-right"></a>
