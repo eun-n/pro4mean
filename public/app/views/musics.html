@@ -6,7 +6,7 @@
 <div class="container">
 	<div class = "well" ng-repeat="music in musics track by $index | limitTo : 10">
 		<div class="row">
-			<iframe class="col-md-6" width="640" height="360" src="{{music.url}}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<iframe class="col-md-6" width="640" height="360" frameBorder="0" src="{{music.url}}" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			  
 			  <a class="col-md-5 col-md-offset-1" ng-href="/musics/{{music._id}}"><h1>{{music.title}}</h1>
 			  <h2 class="minfo">{{music.artist}} | {{music.album}}</h2></a>
