@@ -19,6 +19,7 @@ body {
 
 .well {
 	background-color:#3fb0ac;
+	border: 2px solid #173e43;
 }
 
 a {
@@ -27,4 +28,8 @@ a {
 
 a:hover {
    color: teal;
+}
+
+.minfo {
+	padding-left:15px;
 }
