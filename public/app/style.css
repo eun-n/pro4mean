@@ -1,0 +1,30 @@
+.btn {
+	margin-top: -25px;
+	background-color: crimson;
+	color:white;
+}
+.navbar {
+	background-color: white;
+	opacity: 0.90;
+	height: 46px;
+	width: 100%;
+	margin:auto;
+}
+
+body {
+	/*background-color:#dddfd4;*/
+	font-family:'Nanum Gothic',monospace;
+	background-color:#fae596;
+}
+
+.well {
+	background-color:#3fb0ac;
+}
+
+a {
+	color: #173e43;
+}
+
+a:hover {
+   color: teal;
+}
