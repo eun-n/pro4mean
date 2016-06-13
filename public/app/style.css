@@ -29,3 +29,7 @@ a {
 a:hover {
    color: teal;
 }
+
+#back {
+	margin-top: 10px;
+}
